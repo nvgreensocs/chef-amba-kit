@@ -3,10 +3,10 @@ Chef::Log.warn("Assuming you have downloaded the amba kit amba_socket-1.0.15.tgz
 
 #the plan is to have the recipy simply stall and wait for the file to 'arrive' in the right place 
 #constantly pining the user and saying " please put systemc in this location ....
+
 directory "/vagrant/ModelLibrary" do
   action :create
 end
-
 cookbook_file "/vagrant/ModelLibrary/amba_socket-1.0.15.tgz" do
   source "amba_socket-1.0.15.tgz"
   mode "0644"
