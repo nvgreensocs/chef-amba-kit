@@ -7,7 +7,8 @@ Chef::Log.warn("Assuming you have downloaded the amba kit amba_socket-1.0.15.tgz
 directory "/vagrant/ModelLibrary" do
   action :create
 end
-cookbook_file "/vagrant/ModelLibrary/amba_socket-1.0.15.tgz" do
+
+cookbook_file Chef::Config[:file_cache_path]+"/amba_socket-1.0.15.tgz" do
   source "amba_socket-1.0.15.tgz"
   mode "0644"
 end
@@ -16,7 +17,7 @@ end
 bash "Extract amba kit" do
   code <<-EOH
     cd /vagrant/ModelLibrary
-    tar -zxf amba_socket-1.0.15.tgz
+    tar -zxf #{Chef::Config[:file_cache_path]}/amba_socket-1.0.15.tgz
     rm -rf amba_socket/dependencies/greensocket
   EOH
   creates "/vagrant/ModelLibrary/amba_socket"
