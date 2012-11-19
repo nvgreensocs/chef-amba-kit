@@ -17,6 +17,7 @@ bash "Extract amba kit" do
   code <<-EOH
     cd /vagrant/ModelLibrary
     tar -zxf amba_socket-1.0.15.tgz
+    rm -rf amba_socket/dependencies/greensocket
   EOH
   creates "/vagrant/ModelLibrary/amba_socket"
 end
