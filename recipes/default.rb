@@ -6,7 +6,7 @@ Chef::Log.warn("Assuming you have downloaded the amba kit amba_socket-1.0.15.tgz
 
 directory "/vagrant/ModelLibrary" do
   action :create
-  recursive true
+  recursive :true
 end
 
 cookbook_file Chef::Config[:file_cache_path]+"/amba_socket-1.0.15.tgz" do
