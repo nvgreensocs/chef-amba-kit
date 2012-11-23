@@ -5,7 +5,7 @@ Chef::Log.warn("Assuming you have downloaded the amba kit amba_socket-1.0.15.tgz
 #constantly pining the user and saying " please put systemc in this location ....
 
 directory "/vagrant/ModelLibrary" do
-  recursive true
+  recursive true
   action :create
 end
 
