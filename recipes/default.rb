@@ -3,7 +3,7 @@
 
 # LICENSETEXT
 # 
-#   Copyright (C) 2007 : GreenSocs Ltd
+#   Copyright (C) 2012 : GreenSocs Ltd
 #       http://www.greensocs.com/ , email: info@greensocs.com
 # 
 # The contents of this file are subject to the licensing terms specified
@@ -14,10 +14,7 @@
 
 ruby_block "check AMBA kit exits" do
   block do
-    puts Chef::Config[:cookbook_path][0]+"/chef-amba-kit/files/default/amba_socket-1.0.15.tgz"
     if File.exists?(Chef::Config[:cookbook_path][0]+"/chef-amba-kit/files/default/amba_socket-1.0.15.tgz")
-#      if File.exist?("./cookbooks/chef-amba-kit/files/default/amba_socket-1.0.15.tgz")
-#  puts "Ok, we're good to go"
       else
 	puts "Please visit : "
 	puts "https://portal.carbondesignsystems.com/login.aspx?ReturnUrl=%2fModel%2fCarbon%2fTLM-2.0-AMBA"
