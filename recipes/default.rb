@@ -14,9 +14,8 @@
 
 ruby_block "check AMBA kit exits" do
   block do
-    puts Chef::Config[:cookbook_path][0]+"chef-amba-kit/files/default/amba_socket-1.0.15.tgz"
-   puts `ls Chef::Config[:cookbook_path][0]+"chef-amba-kit/files/default/amba_socket-1.0.15.tgz"`
-    if File.exists?(Chef::Config[:cookbook_path][0]+"chef-amba-kit/files/default/amba_socket-1.0.15.tgz")
+    puts Chef::Config[:cookbook_path][0]+"/chef-amba-kit/files/default/amba_socket-1.0.15.tgz"
+    if File.exists?(Chef::Config[:cookbook_path][0]+"/chef-amba-kit/files/default/amba_socket-1.0.15.tgz")
 #      if File.exist?("./cookbooks/chef-amba-kit/files/default/amba_socket-1.0.15.tgz")
 #  puts "Ok, we're good to go"
       else
