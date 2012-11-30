@@ -12,6 +12,8 @@
 # 
 # ENDLICENSETEXT
 
+ruby_block "check AMBA kit exits" do
+  block do
 puts `ls`
       if File.exist?("./cookbooks/chef-amba-kit/files/default/amba_socket-1.0.15.tgz")
 #  puts "Ok, we're good to go"
@@ -22,7 +24,8 @@ puts `ls`
 	puts "cookbooks/chef-amba-kit/files/default/amba_socket-1.0.15.tgz"
 	exit
       end
-
+  end
+end
 Chef::Log.warn("Assuming you have downloaded the amba kit amba_socket-1.0.15.tgz to the chef-amba-kit/files/default directory")
 
 #the plan is to have the recipy simply stall and wait for the file to 'arrive' in the right place 
