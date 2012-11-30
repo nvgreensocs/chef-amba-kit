@@ -12,7 +12,7 @@
 # 
 # ENDLICENSETEXT
 
-puts "HERE"
+puts `ls`
       if File.exist?("./cookbooks/chef-amba-kit/files/default/amba_socket-1.0.15.tgz")
 #  puts "Ok, we're good to go"
       else
