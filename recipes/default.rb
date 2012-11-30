@@ -15,7 +15,7 @@
 ruby_block "check AMBA kit exits" do
   block do
 puts `ls`
-Chef::Config.run do |config|
+Chef::Config do |config|
 puts config.to_json
 end
 
